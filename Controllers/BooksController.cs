@@ -20,5 +20,14 @@ namespace Reading_List.Controllers
             _service.AddBook(book);
             return Ok("Added");
         }
+        // New Api Endpoint -> ReadAllBooks
+        [HttpGet("[action")]
+        // Define the implimentation 
+        public IActionResult GetBooks(){
+            var allBooks = _service.GetAllBooks(); 
+            // Return all books 
+            return Ok(allBooks); 
+        }
+
     }
 }
