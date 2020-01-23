@@ -28,6 +28,28 @@ namespace Reading_List.Controllers
             // Return all books 
             return Ok(allBooks); 
         }
+          //Update an existing book
+        [HttpPut("UpdateBook/{id}")]
+        public IActionResult UpdateBook(int id, [FromBody]Book book)
+        {
+            _service.UpdateBook(id, book);
+            return Ok(book);
+        }
+
+        //Delete a book (Delete request)
+        [HttpDelete("DeleteBook/{id}")]
+        public IActionResult DeleteBook(int id)
+        {
+            _service.DeleteBook(id);
+            return Ok();
+        }
+        //Get a single book by id 
+        [HttpGet("singleBook/{id}")]
+        public IActionResult GetBookById(int id)
+        {
+            var book = _service.GetBookById(id);
+            return Ok(book);
+        }
 
     }
 }
