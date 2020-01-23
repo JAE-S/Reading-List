@@ -1,2 +1,2 @@
-# Reading-List-
+# Reading-List
 Angular application 
