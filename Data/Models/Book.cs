@@ -1,5 +1,5 @@
 using System;
-namespace Reading_List.Controllers
+namespace Reading_List.Data
 
 {
     public class Book{
@@ -16,7 +16,7 @@ namespace Reading_List.Controllers
 
         public DateTime? DateStart { get; set; }
 
-        public DateTime? DateEnd { get; set; }
+        public DateTime? DateRead { get; set; }
 
     }
 }
