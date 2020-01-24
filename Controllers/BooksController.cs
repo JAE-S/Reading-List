@@ -18,7 +18,7 @@ namespace Reading_List.Controllers
         public IActionResult AddBook([FromBody]Book book)
         {
             _service.AddBook(book);
-            return Ok("Added");
+            return Ok();
         }
         // New Api Endpoint -> ReadAllBooks
         [HttpGet("[action]")]

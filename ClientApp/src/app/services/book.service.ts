@@ -9,7 +9,12 @@ export class BookService {
   _baseURL: string = "api/books"
 
   constructor(private http: HttpClient) { }
+
   getAllBooks(){
     return this.http.get<Book[]>(this._baseURL+"/GetBooks");
+  }
+  
+  addBook(book: Book){
+    return this.http.post(this._baseURL+"/AddBook/", book);
   }
 }

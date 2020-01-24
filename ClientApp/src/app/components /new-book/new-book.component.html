@@ -1,19 +1,20 @@
 
 <div class="add-book">
-    <form action="">
+    <!-- ng submit event with onSubmit method / formControlNames defined in each form group-->
+    <form [formGroup]="addBookForm" (ngSubmit)="onSubmit()">
        
         <div class="from-group">
             <label for="title" class="required">Title</label>
-            <input type="text" class="form-control" id="title" placeholder="Book Title">
+            <input type="text" class="form-control" id="title" formControlName="title" placeholder="Book Title">
         </div>
         <div class="from-group">
             <label for="author" class="required">Author</label>
-            <input type="text" class="form-control" id="author" placeholder="Book Author">
+            <input type="text" class="form-control" id="author" formControlName="author"placeholder="Book Author">
         </div>
         <div class="from-group">
             <label for="description"
             class="required">Description</label>
-            <input type="text" class="form-control" id="description" placeholder="Book Description">
+            <input type="text" class="form-control" id="description" formControlName="description" placeholder="Book Description">
         </div>
         <div class="row">
             <div class="col-md-4 col-xs-4 col-sm-4">
@@ -21,7 +22,7 @@
                     <label for="dateStart">Date Start</label>
                     <input 
                         type="date" 
-                        class="form-control" id="dateStart" placeholder="DD/MM/YYYY"
+                        class="form-control" id="dateStart" formControlName="dateStart" placeholder="DD/MM/YYYY"
                     >
                 </div>
             </div>
@@ -31,7 +32,7 @@
                     <label for="dateRead">Date Read</label>
                     <input 
                         type="date" 
-                        class="form-control" id="dateRead" placeholder="DD/MM/YYYY"
+                        class="form-control" id="dateRead" formControlName="dateRead" placeholder="DD/MM/YYYY"
                     >
                 </div>
             </div>
@@ -42,6 +43,7 @@
                     <input 
                         type="number" min="0" max="5"
                         class="form-control" id="rate" 
+                        formControlName="rate"
                         placeholder="Rate"
                     >
                 </div>
