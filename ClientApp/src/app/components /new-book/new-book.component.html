@@ -1,1 +1,55 @@
-<p>new-book works!</p>
+
+<div class="add-book">
+    <form action="">
+       
+        <div class="from-group">
+            <label for="title" class="required">Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Book Title">
+        </div>
+        <div class="from-group">
+            <label for="author" class="required">Author</label>
+            <input type="text" class="form-control" id="author" placeholder="Book Author">
+        </div>
+        <div class="from-group">
+            <label for="description"
+            class="required">Description</label>
+            <input type="text" class="form-control" id="description" placeholder="Book Description">
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <div class="from-group">
+                    <label for="dateStart">Date Start</label>
+                    <input 
+                        type="date" 
+                        class="form-control" id="dateStart" placeholder="DD/MM/YYYY"
+                    >
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <div class="from-group">
+                    <label for="dateRead">Date Read</label>
+                    <input 
+                        type="date" 
+                        class="form-control" id="dateRead" placeholder="DD/MM/YYYY"
+                    >
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <div class="from-group">
+                    <label for="rate">Rate</label>
+                    <input 
+                        type="number" min="0" max="5"
+                        class="form-control" id="rate" 
+                        placeholder="Rate"
+                    >
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-success" type="submit">Add</button>
+        <!-- When a user clicks the cancel button redirect to the main books page -->
+        <button class="btn btn-default" type="submit" [routerLink]="['/books']">Cancel</button>
+
+    </form>
+</div>
