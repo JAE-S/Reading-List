@@ -14,6 +14,7 @@ import { DeleteBookComponent } from './components /delete-book/delete-book.compo
 import { NewBookComponent } from './components /new-book/new-book.component';
 import { ShowBookComponent } from './components /show-book/show-book.component';
 import { UpdateBookComponent } from './components /update-book/update-book.component';
+import { BookService } from './services/book.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { UpdateBookComponent } from './components /update-book/update-book.compo
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
