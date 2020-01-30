@@ -31,7 +31,7 @@
             <!-- Check the book status -->
             <td>{{book.dateRead ? "Read" : book.dateStart ? "In Progress" : "Not Started"}}</td>
             <td> 
-                Actions
+                <button type="button" class="btn btn-default btn-sm" (click)="showBook(book.id)">Show Books </button> 
             </td>
         </tr>
     </tbody>
